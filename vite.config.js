@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import javascriptObfuscator from "rollup-plugin-obfuscator";
 import { viteSingleFile } from "vite-plugin-singlefile";
+import obfuscator from "vite-plugin-javascript-obfuscator";
 
 export default defineConfig(({ mode }) => {
   return {
@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
       react(),
       viteSingleFile(),
       mode === "production" &&
-        javascriptObfuscator({
+        obfuscator({
           rotateStringArray: true,
         }),
     ].filter(Boolean),

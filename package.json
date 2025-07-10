@@ -10,7 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@vitejs/plugin-react": "^4.6.0",
     "axios": "^1.10.0",
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^18.3.1",
@@ -50,7 +50,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "rollup-plugin-javascript-obfuscator": "^1.0.4",
-    "rollup-plugin-obfuscator": "^1.1.0",
+    "vite-plugin-javascript-obfuscator": "^3.1.0",
     "vite-plugin-singlefile": "^2.3.0"
   }
 }
