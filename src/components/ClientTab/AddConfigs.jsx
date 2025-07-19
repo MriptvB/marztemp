@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { Col, Row, Card, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { Col, Row, Card, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const AddConfigs = ({ data }) => {
   const [AppsData, setAppData] = useState([]);
@@ -13,14 +13,12 @@ const AddConfigs = ({ data }) => {
       });
   }, []);
 
-  const url = data?.subscription_url.includes("https://")
-    ? data?.subscription_url
-    : `${window.location.origin}${data?.subscription_url}`;
+  const url = data?.subscription_url.includes('https://') ? data?.subscription_url : `${window.location.origin}${data?.subscription_url}`;
 
   const openShadowrocketURL = () => {
     const encodedURL = btoa(url);
-    const shadowrocketLink = "sub://" + encodedURL;
-    window.location.href = shadowrocketLink; // Redirect to the Shadowrocket link
+    const shadowrocketLink = 'sub://' + encodedURL;
+    window.location.href = shadowrocketLink;
   };
 
   const menuItems = AppsData?.filter((app) => app.ShowInMenu);
@@ -32,25 +30,14 @@ const AddConfigs = ({ data }) => {
           <Col xs="6" md="3" key={index}>
             <Card>
               <Card.Body
-                as={app.name === "Shadowrocket" ? "div" : Link}
-                onClick={
-                  app.name === "Shadowrocket" ? openShadowrocketURL : undefined
-                }
-                to={
-                  app.name !== "Shadowrocket"
-                    ? app.link?.replace("{url}", url)
-                    : undefined
-                }
-                style={{ cursor: "pointer" }}
+                as={app.name === 'Shadowrocket' ? 'div' : Link}
+                onClick={app.name === 'Shadowrocket' ? openShadowrocketURL : undefined}
+                to={app.name !== 'Shadowrocket' ? app.link?.replace('{url}', url) : undefined}
+                style={{ cursor: 'pointer' }}
               >
                 <Card.Title>{app.name}</Card.Title>
                 <Card.Text>
-                  <Image
-                    className="p-md-4 p-2"
-                    src={app.image}
-                    roundedCircle
-                    fluid
-                  />
+                  <Image className="p-md-4 p-2" src={app.image} roundedCircle fluid />
                 </Card.Text>
               </Card.Body>
             </Card>

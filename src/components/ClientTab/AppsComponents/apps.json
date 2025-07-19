@@ -50,7 +50,7 @@
     "downloadLinks": {
       "iOS": "https://apps.apple.com/us/app/shadowrocket/id932747118"
     },
-    "ShowInMenu": true
+    "ShowInMenu": false
   },
   {
     "name": "Nekoray",

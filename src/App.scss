@@ -1,16 +1,16 @@
-@import "bootstrap/scss/bootstrap";
-@import "react-toastify/dist/ReactToastify.css";
+@import 'bootstrap/scss/bootstrap';
+@import 'react-toastify/dist/ReactToastify.css';
 @import url(./assets/fonts/_fonts.scss);
 
-$main-color: #94143a;
-$main-color-light: rgb(191, 55, 96);
+$main-color: #45b47d;
+$main-color-light: rgb(255, 255, 255);
 
 .header {
   #icon-list {
     color: $main-color;
 
     .blur {
-      background: #a0153e4d;
+      background: #eeebec4d;
       border-radius: 539px;
       display: block;
       filter: blur(10rem);
@@ -23,7 +23,7 @@ $main-color-light: rgb(191, 55, 96);
     ::before {
       background: rgb(64 95 124 / 4%);
       border-radius: 50%;
-      content: " ";
+      content: ' ';
       display: block;
       height: 120px;
       position: absolute;
@@ -35,7 +35,7 @@ $main-color-light: rgb(191, 55, 96);
     ::after {
       background: rgb(64 95 124 / 5%);
       border-radius: 50%;
-      content: " ";
+      content: ' ';
       display: block;
       height: 70px;
       position: absolute;
@@ -491,8 +491,7 @@ body {
 .modal-content {
   background-color: #262c30;
   border-radius: 0.5rem;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)),
-    var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
 
   .img-fluid {
     border: 0.5rem solid white;

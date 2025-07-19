@@ -1,27 +1,27 @@
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Nav, Tab } from "react-bootstrap";
-import Configs from "./ClientTab/Configs";
-import AddConfigs from "./ClientTab/AddConfigs";
-import Apps from "./ClientTab/Apps";
-import { Link } from "react-router-dom";
-import Support from "./ClientTab/Support";
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Container, Nav, Tab } from 'react-bootstrap';
+import Configs from './ClientTab/Configs';
+import AddConfigs from './ClientTab/AddConfigs';
+import Apps from './ClientTab/Apps';
+import { Link } from 'react-router-dom';
+import Support from './ClientTab/Support';
 
 const Client = ({ data }) => {
-  const params = window.location.hash || "#addConfigs";
+  const params = window.location.hash || '#addConfigs';
 
   const navItems = [
-    { key: "#configs", label: "لینک ها", Component: Configs },
-    { key: "#addConfigs", label: "افزودن سابسکریبشن", Component: AddConfigs },
-    { key: "#apps", label: "برنامه ها", Component: Apps },
-    { key: "#support", label: "پشتیبانی", Component: Support },
+    { key: '#configs', label: 'لینک ها', Component: Configs },
+    { key: '#addConfigs', label: 'افزودن سابسکریبشن', Component: AddConfigs },
+    { key: '#apps', label: 'برنامه ها', Component: Apps },
+    // { key: "#support", label: "پشتیبانی", Component: Support },
   ];
 
   return (
     <Container className="box mt-5 p-lg-5 p-3 mb-5">
       <div className="info-title">
         <FontAwesomeIcon className="px-2 flashdot" size="sm" icon={faCircle} />
-        <h3 className="mt-1">{"کانفیگ ها"}</h3>
+        <h3 className="mt-1">{'کانفیگ ها'}</h3>
       </div>
 
       <Tab.Container id="left-tabs-example" defaultActiveKey={params}>

@@ -1,5 +1,0 @@
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - core-js
-  - esbuild
-  - javascript-obfuscator
